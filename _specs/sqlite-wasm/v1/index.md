@@ -19,7 +19,7 @@ nav_title: "Overview"
 nav_order: 0
 ---
 ## Summary
-sqlite wasm
+sqlite wasm into web apps
 
 ## Scope
 sqlite wasm
