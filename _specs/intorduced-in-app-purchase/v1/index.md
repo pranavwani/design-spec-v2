@@ -19,7 +19,7 @@ nav_title: "Overview"
 nav_order: 0
 ---
 ## Summary
-intorduced in app purchase
+intorduced in app purchase soon
 
 ## Scope
 intorduced in app purchase
