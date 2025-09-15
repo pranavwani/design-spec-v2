@@ -282,4 +282,22 @@ Header + leftbar remain static. Degrades gracefully (normal links) if JS fails.
 function goHome() {
     window.location.href = "/design-spec-v2/";
   }
+
+  document.addEventListener("click", function (e) {
+  const link = e.target.closest(".sidebar1 a"); // only sidebar links
+  if (!link) return;
+
+  e.preventDefault();
+
+  const targetId = link.getAttribute("href");
+  const targetEl = document.querySelector(".spec-content " + targetId);
+
+  if (targetEl) {
+    targetEl.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+});
+
 </script>
