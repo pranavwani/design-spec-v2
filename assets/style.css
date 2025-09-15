@@ -1,25 +1,3 @@
-/* ---- Theme Variables ---- */
-:root {
-  --bg: #f5f6fa;
-  --text: #111;
-  --sub: #555;
-  --border: #e6e9ef;
-  --muted: #f3f4f6;
-  --btn-bg: #334155;
-  --btn-text: #fff;
-}
-
-:root.dark {
-  --bg: #0f172a;
-  --text: #f8fafc;
-  --sub: #94a3b8;
-  --border: #334155;
-  --muted: #1e293b;
-  --btn-bg: #475569;
-  --btn-text: #f1f5f9;
-}
-
-
 :root { --ring:#0a66ff; --muted:#f6f7f9; --text:#111; --sub:#555; --border:#e5e7eb; }
 *{box-sizing:border-box}
 body{margin:0;color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
@@ -80,35 +58,53 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 /* --- Spec page header --- */
 /* --- Modern header with full meta --- */
 
-/* ---- Navbar ---- */
 .navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--bg);
-  color: var(--text);
+  background: #0f172a;
+  color: white;
   padding: 16px 12px;
   display: flex;
-  justify-content: center;
+  justify-content: center;  /* center title */
   align-items: center;
-  border-bottom: 1px solid var(--border);
+}
+
+.navbar .title-group {
+  margin-right: 58%;
+  text-align: center;
 }
 
 .title-group {
-  display: flex;
+  display: flex;        
   gap: 8px;
   cursor: pointer;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .title-group:hover {
-  color: var(--ring, #2563eb);
+  color: #007bff;
   transform: scale(1.02);
 }
 
+.title-group h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.home-icon svg {
+  display: block;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
 .actions1 {
+  margin-right: 12%;
   position: absolute;
-  right: 16px;
+  right: 16px;   /* stick to right edge */
   display: flex;
   gap: 10px;
   top: 10px;
@@ -117,20 +113,14 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 .btn {
   padding: 8px 14px;
   border-radius: 6px;
+  text-decoration: none;
   font-size: 14px;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  border: 1px solid var(--border);
-  cursor: pointer;
-  transition: background 0.2s ease;
+  background: #334155;
+  color: white;
 }
-.btn:hover {
-  background: var(--muted);
-  color: var(--text);
-}
+
 .btn.primary {
   background: #0ea5a4;
-  color: #fff;
 }
 
 .spec-header {
@@ -306,16 +296,16 @@ body{
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.25); }
 
+/* Compact chip-style action buttons used in the table */
 .view-btn {
   padding: 6px 10px;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  text-decoration: none;
-  color: var(--text);
+  border-radius: 999px;
+  font-size: 13px;
+  background:#fff;
+  transition: border-color .15s ease, background .15s ease, box-shadow .15s ease;
 }
-.view-btn:hover {
-  background: var(--muted);
-}
+.view-btn:hover { background:#f7f8fb; }
+.view-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.25); }
 
 /* Keep action links tidy in a row */
 .cell-actions {
@@ -341,33 +331,23 @@ body{
 .tab[aria-selected="false"] { background: #f3f4f6; color: #374151; }
 .tab:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.25); }
 
+/* 4) Search input — soft background + focus ring */
 .searchbar input {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--muted);
-  color: var(--text);
+  background: #f9fafb;
+  transition: box-shadow .15s ease, border-color .15s ease, background .15s ease;
 }
 .searchbar input:focus {
-  background: var(--bg);
-  border-color: #6366f1;
+  background:#fff;
+  border-color:#c7d2fe;
+  box-shadow: 0 0 0 3px rgba(99,102,241,.2);
   outline: none;
 }
 
-
-/* ---- Table ---- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 12px;
-  background: var(--bg);
-}
-th, td {
-  padding: 10px 8px;
-  border-bottom: 1px solid var(--border);
-  color: var(--text);
-}
+/* 5) Table polish — hover stripe + sticky header on mobile wrap */
+table { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+tbody tr:hover { background: #fafbff; }
+th, td { vertical-align: middle; }
+th { background: #fff; }
 
 /* 6) Hero row balance – center actions vertically (you asked for this) */
 .hero-top { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; }
@@ -441,24 +421,44 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
   display: flex;
   gap: 12px;
 }
-/* ---- Tabs ---- */
 .tab1 {
-  padding: 8px 12px;
+  position: relative;
+  padding: 8px 20px;
   border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  background: #f3f4f6;
+  color: #374151;
   cursor: pointer;
-  border: 1px solid transparent;
-  background: var(--muted);
-  color: var(--text);
+  transition: all 0.3s ease;
+  z-index: 1;
 }
 .tab1[aria-selected="true"] {
-  background: #6366f1;
   color: #fff;
+  font-weight: 700;
+  background: transparent; /* show gradient indicator */
+  z-index: 2; /* above indicator */
 }
-.tab-indicator {
-  height: 3px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+.tab1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+.tab1 {
+  background: #f3f4f6;
+}
+.tabs1 {
   position: relative;
+}
+
+/* Indicator full effect */
+.tab-indicator {
+  position: absolute;
+  top: 0; /* cover entire tab height */
+  height: 100%;
+  border-radius: 999px;
+  transition: left 0.3s ease, width 0.3s ease, background 0.3s ease;
+  z-index: 1; /* below active tab text */
 }
 
 /* Fancy toggle pill */
