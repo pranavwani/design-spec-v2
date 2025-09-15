@@ -182,9 +182,9 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 
 .spec-grid {
   display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 24px;
-  padding-top: 12px;
+  grid-template-columns: 240px 1fr; /* sidebar + content */
+  height: 100vh; /* full viewport height */
+  overflow: hidden; /* prevent whole page scroll */
 }
 
 /* Sidebar = left column with vertical separator */
@@ -550,10 +550,19 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
 
 /* Sidebar layout */
 .sidebar1 {
-  width: 240px;
-  background: #fff;
-  border-right: 1px solid #e5e7eb;
-  padding: 20px;
+ position: sticky;
+  top: 0;
+  align-self: start; /* keep pinned to top */
+  height: 100vh; /* stretch full height */
+  overflow-y: auto; /* optional if sidebar items overflow */
+  background: #f8f9fa; /* example bg */
+  border-right: 1px solid #ddd;
+}
+
+.spec-content {
+  overflow-y: auto; /* only content scrolls */
+  height: 100vh; /* fill available height */
+  padding: 16px;
 }
 
 .sidebar-nav1 {
