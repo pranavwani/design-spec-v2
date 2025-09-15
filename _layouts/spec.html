@@ -259,38 +259,25 @@ Header + leftbar remain static. Degrades gracefully (normal links) if JS fails.
 
   document.addEventListener("DOMContentLoaded", () => {
   const raw = document.querySelector("#raw-content");
-  if (!raw) return;
-
   const sections = [];
-  let current = null;
+  let current;
 
-  raw.childNodes.forEach(node => {
-    if (node.nodeType === Node.ELEMENT_NODE && (node.tagName === "H1" || node.tagName === "H2")) {
-      // Close previous section
+  [...raw.childNodes].forEach(node => {
+    if (node.tagName === "H2" || node.tagName === "H1") {
       if (current) sections.push(current);
-
-      // Start a new card
       current = document.createElement("div");
       current.className = "content-card1";
       current.appendChild(node);
-    } else {
-      // If no section started yet, start a wrapper anyway
-      if (!current) {
-        current = document.createElement("div");
-        current.className = "content-card1";
-      }
+    } else if (current) {
       current.appendChild(node);
     }
   });
 
-  // Push the final section
   if (current) sections.push(current);
 
-  // Clear and re-append
   raw.innerHTML = "";
   sections.forEach(sec => raw.appendChild(sec));
 });
-
 
 function goHome() {
     window.location.href = "/design-spec-v2/";
