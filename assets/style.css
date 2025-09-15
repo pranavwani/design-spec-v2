@@ -235,7 +235,7 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
   .sidebar { border-right: 0; padding-right: 0; position: static; max-height: none; }
 }
 
-#spec-content { transition: opacity .12s ease; }
+#spec-content { transition: opacity .12s ease; overflow: auto;}
 
 /* Keep action links tidy in a row */
 .cell-actions {
@@ -555,7 +555,7 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
   align-self: start; /* keep pinned to top */
   height: 100vh; /* stretch full height */
   overflow-y: auto; /* optional if sidebar items overflow */
-  background: #f8f9fa; /* example bg */
+  background: #fff; /* example bg */
   border-right: 1px solid #ddd;
 }
 
