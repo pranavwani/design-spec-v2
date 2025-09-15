@@ -83,10 +83,8 @@ Works for both /specs/... and /drafts/... because we use the page’s collection
 Collect files that belong to this space, keep only top-level (index + first-level pages),
 and build a normalized list with label/order (front-matter wins; otherwise map/fallback).
 {%- endcomment -%}
-{%- assign parts = page.path | split:'/' -%}
-{%- assign space_root = parts[0] | append: '/' | append: parts[1] | append: '/' | append: parts[2] | append: '/' -%}
-{%- assign docs = coll | where_exp:'d', "d.path contains space_root" -%}
-
+{%- assign space_dir = page.path | replace: '/index.md','/' -%}
+{%- assign docs = coll | where_exp:'d', "d.path contains space_dir" -%}
 {%- assign docs = docs | sort: 'nav_order' -%}
 
 {%- assign normalized = "" | split: "" -%}
