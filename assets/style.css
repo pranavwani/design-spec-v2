@@ -603,7 +603,6 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
 
 .main {
   flex: 1;
-  padding: 24px 40px;
   overflow-y: auto;
 }
 
