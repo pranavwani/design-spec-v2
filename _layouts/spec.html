@@ -33,6 +33,14 @@ Works for both /specs/... and /drafts/... because we use the page’s collection
         Submit an Update
       </a>
     </div>
+     <div>
+  <input type="checkbox" class="checkbox" id="checkbox">
+  <label for="checkbox" class="checkbox-label">
+    <i class="fas fa-moon"></i>
+    <i class="fas fa-sun"></i>
+    <span class="ball"></span>
+  </label>
+</div>
   </div>
 
   <!-- Main -->
@@ -282,4 +290,9 @@ Header + leftbar remain static. Degrades gracefully (normal links) if JS fails.
 function goHome() {
     window.location.href = "/design-spec-v2/";
   }
+
+  const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark")
+})
 </script>
