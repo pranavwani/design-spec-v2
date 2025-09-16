@@ -519,7 +519,7 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #712cf9f2
+  background: #712cf9f2;
   color: white;
   padding: 16px 12px;
   display: flex;
