@@ -27,6 +27,9 @@ title: Home
         Submit an Update
       </a>
     </div>
+     <div class="theme-toggle">
+      <button id="themeBtn">🌙</button>
+    </div>
   </div>
 
   <main class="wrap">
@@ -298,6 +301,25 @@ tabs1.forEach(tab => {
   });
 });
 
+const btn = document.getElementById('themeBtn');
+  const root = document.documentElement;
+  const THEME_KEY = 'specs.theme';
+
+  // Load saved theme
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme) {
+    root.setAttribute('data-theme', savedTheme);
+    btn.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  }
+
+  // Toggle theme
+  btn.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem(THEME_KEY, next);
+    btn.textContent = next === 'dark' ? '☀️' : '🌙';
+  });
   
 
 </script>
