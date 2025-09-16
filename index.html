@@ -3,6 +3,8 @@ layout: base
 title: Home
 ---
 
+
+
   <div class="navbar">
     <div class="title-group" onclick="goHome()">
       <span class="home-icon">
@@ -296,38 +298,6 @@ tabs1.forEach(tab => {
   });
 });
 
-<<<<<<< HEAD
-=======
-// --- Theme Switcher Logic ---
-        const body = document.body;
-        const themeToggle = document.getElementById('themeToggle');
-        const THEME_KEY = "specs.theme";
-        
-        function applyTheme(theme) {
-            if (theme === "dark") {
-                body.classList.add("dark");
-                themeToggle.textContent = "☀️";
-            } else {
-                body.classList.remove("dark");
-                themeToggle.textContent = "🌙";
-            }
-            localStorage.setItem(THEME_KEY, theme);
-        }
-
-        // Load saved theme or use system preference
-        const savedTheme = localStorage.getItem(THEME_KEY);
-        if (savedTheme) {
-            applyTheme(savedTheme);
-        } else {
-            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            applyTheme(prefersDark ? "dark" : "light");
-        }
-
-        themeToggle.addEventListener("click", () => {
-            const current = body.classList.contains("dark") ? "dark" : "light";
-            applyTheme(current === "dark" ? "light" : "dark");
-        });
->>>>>>> ef6635e7b4a81db78e1285e2caeb603a110e2318
   
 
 </script>
