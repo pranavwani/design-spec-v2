@@ -62,7 +62,7 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #712cf9f2
+  background: #712cf9f2;
   color: white;
   padding: 16px 12px;
   display: flex;
