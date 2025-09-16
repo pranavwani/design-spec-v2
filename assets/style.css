@@ -235,7 +235,12 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
   .sidebar { border-right: 0; padding-right: 0; position: static; max-height: none; }
 }
 
-#spec-content { transition: opacity .12s ease; overflow: auto;}
+#spec-content {
+  transition: opacity .12s ease;
+  overflow-y: auto;
+  height: calc(100vh - 50px); /* Adjust '50px' to the actual height of your header/navbar */
+  padding: 16px;
+}
 
 /* Keep action links tidy in a row */
 .cell-actions {
