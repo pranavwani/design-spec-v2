@@ -733,7 +733,7 @@ body.dark table {
 
 /* Table Headers */
 body.dark th {
-  background-color: #444; /* Slightly lighter dark for the header */
+  background-color: #444;
   color: #fff;
   padding: 12px;
   text-align: left;
@@ -742,18 +742,18 @@ body.dark th {
 /* Table Data Cells */
 body.dark td {
   padding: 12px;
-  border-bottom: 1px solid #555; /* A subtle divider line */
+  border-bottom: 1px solid #555;
 }
 
-/* Table Row Hover State */
+/* Table Row Hover State - The Corrected Rule */
 body.dark tbody tr:hover {
-  background-color: #40444d; /* A subtle, darker shade on hover */
-  cursor: pointer; /* Add a pointer cursor to indicate it's interactive */
+  background-color: #40444d !important; /* Use !important to override the conflicting rule */
+  cursor: pointer;
 }
 
 /* Links */
 body.dark a {
-  color: #9b59b6; /* A standout color for links */
+  color: #9b59b6;
   text-decoration: none;
 }
 
