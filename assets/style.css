@@ -365,7 +365,7 @@ th { background: #fff; }
 .pill--muted { background:#fff; }
 
 /* 8) Dark mode (safe) */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root { --text:#e5e7eb; --sub:#9ca3af; --border:#2e3440; --muted:#1f2430; }
   body { background:#0f141b; }
   .btn.primary { background:#3b82f6; border-color:#3b82f6; }
@@ -374,7 +374,7 @@ th { background: #fff; }
   th { background:#0f141b; }
   tbody tr:hover { background:#18202b; }
   .view-btn { background:#0f141b; }
-}
+} */
 
 /* 9) Tiny motion everywhere */
 a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, border-color .15s ease, box-shadow .15s ease, transform .04s ease; }
