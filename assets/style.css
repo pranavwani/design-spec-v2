@@ -83,7 +83,7 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 }
 
 .title-group:hover {
-  color: #d4fa15
+  color: #d4fa15;
   transform: scale(1.02);
 }
 
