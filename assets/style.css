@@ -96,12 +96,14 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #0f172a;
   color: white;
   padding: 16px 12px;
   display: flex;
   justify-content: center;  /* center title */
   align-items: center;
+  background: var(--navbar-bg);
+  color: var(--navbar-text);
+  border-bottom: 1px solid var(--border);
 }
 
 .navbar .title-group {
