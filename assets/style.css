@@ -710,15 +710,6 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
   background-color: #f9f9f9;
 }
 
-body.dark {
-  background-color: #292c35;
-}
-
-body.dark .wrap .searchbar .toolbar1 a {
-  color: #292c35;
-}
-
-
 /* Dark Mode Base Styles */
 body.dark {
   background-color: #292c35;
@@ -760,6 +751,56 @@ body.dark a {
 /* Link Hover State */
 body.dark a:hover {
   text-decoration: underline;
+}
+
+/* Dark mode for the toolbar */
+body.dark .toolbar1 {
+  background: #1f2430;
+  border: 1px solid #2e3440;
+}
+
+body.dark .tab1 {
+  background: #2e3440;
+  color: #9ca3af;
+}
+
+body.dark .tab1[aria-selected="true"] {
+  background: transparent;
+  color: #fff;
+}
+
+body.dark .tab-indicator {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+}
+
+body.dark .toggle-pill {
+  color: #9ca3af;
+}
+
+body.dark .toggle-pill input {
+  background: #555;
+}
+
+body.dark .toggle-pill input:checked {
+  background: #3b82f6;
+}
+
+/* Dark mode for the search input */
+body.dark .searchbar input {
+  background: #1f2430; /* A dark background from your CSS variables */
+  border: 1px solid #2e3440; /* A dark border to match the theme */
+  color: #fff; /* White text for readability */
+}
+
+/* Style for the search input placeholder text in dark mode */
+body.dark .searchbar input::placeholder {
+  color: #9ca3af; /* A lighter, muted color for the placeholder */
+}
+
+/* Optional: Style the input on focus for a nice visual cue */
+body.dark .searchbar input:focus {
+  border-color: #3b82f6; /* A standout blue border on focus */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Subtle blue glow on focus */
 }
 
 .checkbox {
