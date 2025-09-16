@@ -62,7 +62,7 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #0f172a;
+  background: #712cf9f2
   color: white;
   padding: 16px 12px;
   display: flex;
@@ -83,7 +83,7 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 }
 
 .title-group:hover {
-  color: #007bff;
+  color: #d4fa15
   transform: scale(1.02);
 }
 
@@ -519,7 +519,7 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: #0f172a;
+  background: #712cf9f2
   color: white;
   padding: 16px 12px;
   display: flex;
