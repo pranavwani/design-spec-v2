@@ -719,50 +719,47 @@ body.dark .wrap .searchbar .toolbar1 a {
 }
 
 
+/* Dark Mode Base Styles */
 body.dark {
   background-color: #292c35;
-  color: #fff; /* Apply a default text color to the body */
+  color: #fff;
 }
 
-/* Style for the table itself */
+/* Table Specific Styles */
 body.dark table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/* Style for table headers */
+/* Table Headers */
 body.dark th {
-  background-color: #444; /* A slightly lighter dark background for headers */
+  background-color: #444; /* Slightly lighter dark for the header */
   color: #fff;
   padding: 12px;
   text-align: left;
 }
 
-/* Style for table data cells */
+/* Table Data Cells */
 body.dark td {
   padding: 12px;
-  border-bottom: 1px solid #555; /* A subtle border to separate rows */
+  border-bottom: 1px solid #555; /* A subtle divider line */
 }
 
-/* Style for links within the table */
+/* Table Row Hover State */
+body.dark tbody tr:hover {
+  background-color: #40444d; /* A subtle, darker shade on hover */
+  cursor: pointer; /* Add a pointer cursor to indicate it's interactive */
+}
+
+/* Links */
 body.dark a {
-  color: #9b59b6; /* Use a distinct, light color for links */
+  color: #9b59b6; /* A standout color for links */
   text-decoration: none;
 }
 
-/* Optional: Add a hover effect for links */
+/* Link Hover State */
 body.dark a:hover {
   text-decoration: underline;
-}
-
-/* Optional: Style the table rows for better readability */
-body.dark tbody tr {
-  background-color: #353841; /* Default row color */
-}
-
-/* Optional: Add a subtle hover effect for rows */
-body.dark tbody tr:hover {
-  background-color: #40444d;
 }
 
 .checkbox {
