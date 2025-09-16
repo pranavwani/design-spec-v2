@@ -550,10 +550,11 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
 
 /* Sidebar layout */
 .sidebar1 {
+  border-radius: 3%;
  position: sticky;
   top: 0;
   align-self: start; /* keep pinned to top */
-  height: 100vh; /* stretch full height */
+  /* height: 100vh; stretch full height */
   overflow-y: auto; /* optional if sidebar items overflow */
   background: #fff; /* example bg */
   border-right: 1px solid #ddd;
