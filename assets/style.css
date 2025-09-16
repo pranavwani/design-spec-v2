@@ -16,11 +16,11 @@ table{width:100%;border-collapse:collapse;margin-top:12px}
 th{font-weight:600;text-align:left;border-bottom:1px solid var(--border);padding:10px 8px}
 td{padding:10px 8px;border-bottom:1px solid var(--border)}
  .view-btn{padding:6px 10px;border:1px solid var(--border);border-radius:6px;text-decoration:none}
-/*.empty{padding:14px;color:var(--sub)}
-.table-toolbar{display:flex;justify-content:flex-end;align-items:center;margin:8px 0}
+empty{padding:14px;color:var(--sub)}
+/*.table-toolbar{display:flex;justify-content:flex-end;align-items:center;margin:8px 0}
 .toggle{display:flex;gap:8px;align-items:center;font-size:14px;color:var(--sub)}
-.toggle input{transform:scale(1.1)}
-.u-hidden{display:none}*/
+.toggle input{transform:scale(1.1)}*/
+.u-hidden{display:none}
 .col-updated{color:var(--sub)}
 /*.topbar{margin-bottom:10px}
 .back{text-decoration:none;border:1px solid var(--border);padding:6px 10px;border-radius:8px}*/
