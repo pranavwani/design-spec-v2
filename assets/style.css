@@ -803,6 +803,78 @@ body.dark .searchbar input:focus {
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25); /* Subtle blue glow on focus */
 }
 
+
+/* Dark Mode: Main Layout */
+body.dark .wrap,
+body.dark .main,
+body.dark .spec-grid,
+body.dark #spec-content {
+  color: #e5e7eb;
+}
+
+body.dark .header h1,
+body.dark .spec-heading {
+  color: #fff;
+}
+
+/* Dark Mode: Tags and Badges */
+body.dark .tags a,
+body.dark .tags span {
+  background-color: #1f2430;
+  color: #9ca3af;
+  border-color: #2e3440;
+}
+
+body.dark .tag.active {
+  background-color: #2e4d3c;
+  color: #6ee7b7;
+}
+
+body.dark .tag.owner {
+  background-color: #4b4430;
+  color: #fde047;
+}
+
+/* Dark Mode: Sidebar Navigation */
+body.dark .sidebar1 {
+  background: #1f2430;
+  border-color: #2e3440;
+}
+
+body.dark .side-link1 {
+  color: #9ca3af;
+}
+
+body.dark .side-link1:hover {
+  background: #2e3440;
+  color: #e5e7eb;
+}
+
+body.dark .side-link1.active {
+  background: #3b82f6;
+  color: #fff;
+}
+
+/* Dark Mode: Content Cards and Links */
+body.dark .content-card1 {
+  background-color: #1f2430;
+  border-color: #2e3440;
+}
+
+body.dark .content-card1 h2 {
+  color: #fff;
+  border-bottom-color: #2e3440;
+}
+
+body.dark .content-card1 p,
+body.dark .content-card1 li {
+  color: #a5a5a5;
+}
+
+body.dark .content-card1 a {
+  color: #9b59b6;
+}
+
 .checkbox {
   opacity: 0;
   position: absolute;
