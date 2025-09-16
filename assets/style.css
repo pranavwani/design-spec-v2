@@ -238,7 +238,7 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 #spec-content {
   transition: opacity .12s ease;
   overflow-y: auto;
-  height: calc(100vh - 50px); /* Adjust '50px' to the actual height of your header/navbar */
+  height: calc(80vh - 50px); /* Adjust '50px' to the actual height of your header/navbar */
   padding: 16px;
 }
 
