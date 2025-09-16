@@ -1,27 +1,38 @@
 :root {
+  /* Light mode (default) */
   --bg: #ffffff;
   --text: #111111;
   --sub: #555555;
   --border: #e5e7eb;
   --muted: #f6f7f9;
   --ring: #0a66ff;
-  --navbar-bg: #ffffff;
-  --navbar-text: #111111;
 }
 
 :root[data-theme="dark"] {
+  /* Dark mode */
   --bg: #0f172a;
   --text: #f8fafc;
   --sub: #94a3b8;
   --border: #1e293b;
   --muted: #1e293b;
   --ring: #38bdf8;
-  --navbar-bg: #1e293b;
-  --navbar-text: #f8fafc;
 }
-
-
-/* :root { --ring:#0a66ff; --muted:#f6f7f9; --text:#111; --sub:#555; --border:#e5e7eb; } */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+.theme-toggle {
+  position: absolute;
+  right: 80px; /* adjust so it doesn’t overlap actions */
+  top: 14px;
+}
+.theme-toggle button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: inherit;
+}
 *{box-sizing:border-box}
 body{margin:0;color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial; overflow: hidden;}
 .wrap{max-width:1400px;margin:55px auto;padding:0 16px}
@@ -81,69 +92,69 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 /* --- Spec page header --- */
 /* --- Modern header with full meta --- */
 
-/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
-  background: var(--navbar-bg);
-  color: var(--navbar-text);
-  padding: 12px 20px;
+  z-index: 1000;
+  background: #0f172a;
+  color: white;
+  padding: 16px 12px;
   display: flex;
+  justify-content: center;  /* center title */
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--border);
-  z-index: 10;
 }
 
 .navbar .title-group {
-  font-weight: bold;
-  font-size: 1.2rem;
+  margin-right: 63%;
+  text-align: center;
 }
 
-.navbar .actions {
-  display: flex;
-  gap: 0.5rem;
-}
-
-/* Theme toggle */
-.theme-toggle button {
-  background: none;
-  border: none;
-  font-size: 18px;
+.title-group {
+  display: flex;        
+  gap: 8px;
   cursor: pointer;
-  color: inherit;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Header Wrap */
-.wrap .header .title-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 20px;
-  border-bottom: 1px solid var(--border);
+.title-group:hover {
+  color: #007bff;
+  transform: scale(1.02);
 }
 
 .title-group h1 {
   margin: 0;
+  font-size: 1.5rem;
 }
 
-/* Buttons */
+.home-icon svg {
+  display: block;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.actions1 {
+  margin-right: 9%;
+  position: absolute;
+  right: 16px;   /* stick to right edge */
+  display: flex;
+  gap: 10px;
+  top: 10px;
+}
+
 .btn {
-  padding: 0.4rem 0.8rem;
+  padding: 8px 14px;
   border-radius: 6px;
-  cursor: pointer;
-  border: 1px solid var(--border);
-  background: var(--muted);
-  color: var(--text);
-  font-size: 0.9rem;
+  text-decoration: none;
+  font-size: 14px;
+  background: #334155;
+  color: white;
 }
 
 .btn.primary {
-  background: var(--ring);
-  color: #fff;
-  border: none;
+  background: #0ea5a4;
 }
 
 .spec-header {
@@ -301,12 +312,13 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 
 /* 1) Subtle page background + crisper borders */
 body{
+  background: #f5f6fa; /* soft light gray */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  min-height: 100vh;
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s ease, color 0.3s ease;
-}
+  padding: 0;
+}    
 :root { --border:#e6e9ef; --ring:#2563eb; }
 
 /* 2) Buttons – hover/active/focus, slightly bolder */
