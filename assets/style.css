@@ -445,10 +445,6 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
   background: transparent; /* show gradient indicator */
   z-index: 2; /* above indicator */
 }
-.tab1:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-}
 .tab1 {
   background: #f3f4f6;
 }
