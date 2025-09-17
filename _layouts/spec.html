@@ -141,7 +141,7 @@ and build a normalized list with label/order (front-matter wins; otherwise map/f
   <aside class="sidebar1">
   <nav class="sidebar-nav1">
     <ul class="side-links1">
-      {%- for d in site.specs -%}
+      {%- for d in docs -%}
         {%- assign rel = d.path | remove_first: space_dir -%}
         {%- assign depth = rel | split:'/' | size -%}
         {%- if depth > 1 -%}{% continue %}{%- endif -%}
