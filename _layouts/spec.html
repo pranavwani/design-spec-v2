@@ -138,7 +138,7 @@ and build a normalized list with label/order (front-matter wins; otherwise map/f
 {%- assign sorted = normalized | sort: 'order' -%}
 
 <div class="spec-grid">
-  <aside class="sidebar1">
+<!--   <aside class="sidebar1">
   <nav class="sidebar-nav1">
     <ul class="side-links1">
       {%- for d in docs -%}
@@ -159,6 +159,30 @@ and build a normalized list with label/order (front-matter wins; otherwise map/f
     </ul>
   </nav>
 </aside>
+ -->
+<aside class="sidebar1">
+  <nav class="sidebar-nav1">
+    <ul class="side-links1">
+      {%- assign sorted_specs = site.specs | sort: 'nav_order' -%}
+      {%- for d in sorted_specs -%}
+        {%- assign rel = d.path | remove_first: space_dir -%}
+        {%- assign depth = rel | split:'/' | size -%}
+        {%- if depth > 1 -%}{% continue %}{%- endif -%}
+
+        {%- assign href = d.url | replace: '/index.html','/' -%}
+        {%- assign is_active = page.url == d.url -%}
+        <li>
+          <a href="{{ href | relative_url }}"
+             class="side-link1 {% if is_active %}active{% endif %}"
+             {% if is_active %}aria-current="page"{% endif %}>
+            {{ d.nav_title | default: d.title | default: 'Untitled' }}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+</aside>  
+  
 
   <section id="spec-content" class="content">
   <div id="raw-content">
