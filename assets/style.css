@@ -891,4 +891,5 @@ body.dark a.btn:hover {
   box-shadow: none;
   width: auto;
   height: auto;
+  cursor: pointer;
 }
