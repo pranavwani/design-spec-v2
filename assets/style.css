@@ -115,12 +115,12 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
   border-radius: 6px;
   text-decoration: none;
   font-size: 14px;
-  background: #334155;
-  color: white;
+/*   background: #334155; */
+  color: #ffffffd9;
 }
 
 .btn.primary {
-  background: #0ea5a4;
+  background: #ffffffd9;
 }
 
 .spec-header {
@@ -297,7 +297,7 @@ body{
   font-weight: 600;
   transition: background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .04s ease;
 }
-.btn:hover { background: #F44336; }
+.btn:hover { background: #fff; }
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.25); }
 
@@ -451,7 +451,10 @@ a, .view-btn, .tab, .btn { transition: background .15s ease, color .15s ease, bo
 .tabs1 {
   position: relative;
 }
-
+.tab1:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
 /* Indicator full effect */
 .tab-indicator {
   position: absolute;
