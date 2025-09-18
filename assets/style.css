@@ -5,7 +5,7 @@ body{margin:0;color:var(--text);font-family:ui-sans-serif,system-ui,-apple-syste
 .hero h1{margin:0 0 8px;font-size:28px}
 .lead{color:var(--sub);margin:0 0 16px}
 .actions{display:flex;gap:12px;margin:12px 0 24px}
-.btn{padding:10px 14px;border:1px solid var(--border);border-radius:8px;text-decoration:none}
+.btn{padding:10px 14px; border-radius:8px;text-decoration:none}
 .btn.primary{background:var(--ring);border-color:var(--ring);color:#fff}
 .tabs{display:flex;gap:8px;border-bottom:1px solid var(--border)}
 .tab{padding:10px 12px;border:1px solid transparent;border-top-left-radius:8px;border-top-right-radius:8px;cursor:pointer}
@@ -297,7 +297,7 @@ body{
   font-weight: 600;
   transition: background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .04s ease;
 }
-.btn:hover { background: #fff; }
+.btn:hover { color: #fff; }
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.25); }
 
@@ -876,4 +876,16 @@ body.dark .content-card1 a {
 
 body.dark .col-updated {
   color: var(--sub-dark); /* Use a specific dark mode subdued color */
+}
+body.dark a.btn {
+  color: #fff; /* Sets the text color to white */
+}
+.icon-only-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  outline: none;
+  box-shadow: none;
+  width: auto;
+  height: auto;
 }
