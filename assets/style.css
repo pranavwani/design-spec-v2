@@ -880,6 +880,9 @@ body.dark .col-updated {
 body.dark a.btn {
   color: #fff; /* Sets the text color to white */
 }
+body.dark a.btn:hover {
+  text-decoration: none;
+}
 .icon-only-btn {
   background: none;
   border: none;
