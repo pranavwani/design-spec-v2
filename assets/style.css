@@ -102,7 +102,7 @@ td{padding:10px 8px;border-bottom:1px solid var(--border)}
 }
 
 .actions1 {
-  margin-right: 9%;
+  margin-right: 10%;
   position: absolute;
   right: 16px;   /* stick to right edge */
   display: flex;
