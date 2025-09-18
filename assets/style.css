@@ -297,7 +297,7 @@ body{
   font-weight: 600;
   transition: background .15s ease, border-color .15s ease, box-shadow .15s ease, transform .04s ease;
 }
-.btn:hover { color: #fff; }
+.btn:hover { color: #fff; transform: scale(1.02);}
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(37,99,235,.25); }
 
